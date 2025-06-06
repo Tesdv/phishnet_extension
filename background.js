@@ -2,6 +2,14 @@ browser.messageDisplay.onMessageDisplayed.addListener(async (tab, message) => {
   try {
     await ensurePhishingTagExists();
 
+    const msg = await browser.messages.get(message.id);
+    const hasPhishTag = msg.tags && msg.tags.includes("phishnet-warning");
+
+    if (hasPhishTag) {
+      console.log("Message already tagged as phishing, skipping API call.");
+      return;
+    }
+
     const full = await browser.messages.getFull(message.id);
 
     let body = "";

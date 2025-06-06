@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "author": "group1",
+  "author": "group_1",
   "applications": {
     "gecko": {
       "id": "helloworld@yoursite.com"
@@ -14,13 +14,7 @@
     "messagesRead",
     "messagesUpdate",
     "messagesTags",
-    "messagesTagsList",
-    "messagesModify",
-    "messageDisplay",
-    "tabs",
-    "storage",
-    "notifications",
-    "accountsRead"
+    "messagesTagsList"
   ],
   "message_display_action": {
     "default_title": "PhishNet"
@@ -30,12 +24,6 @@
       "background.js"
     ]
   },
-  "message_display_scripts": [
-  {
-    "js": ["messageDisplay/message-content-script.js"],
-    "css": ["messageDisplay/message-content-styles.css"]
-  }
-  ],
   "icons": {
     "38": "icons/icon38.png",
     "64": "icons/icon64.png"
