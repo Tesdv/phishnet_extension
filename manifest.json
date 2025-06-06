@@ -1,0 +1,43 @@
+{
+  "manifest_version": 2,
+  "author": "group1",
+  "applications": {
+    "gecko": {
+      "id": "helloworld@yoursite.com"
+    }
+  },
+  "name": "PhishNet",
+  "version": "1.0",
+  "description": "AI phishing detection tool for email clients",
+  "permissions": [
+    "<all_urls>",
+    "messagesRead",
+    "messagesUpdate",
+    "messagesTags",
+    "messagesTagsList",
+    "messagesModify",
+    "messageDisplay",
+    "tabs",
+    "storage",
+    "notifications",
+    "accountsRead"
+  ],
+  "message_display_action": {
+    "default_title": "PhishNet"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "message_display_scripts": [
+  {
+    "js": ["messageDisplay/message-content-script.js"],
+    "css": ["messageDisplay/message-content-styles.css"]
+  }
+  ],
+  "icons": {
+    "38": "icons/icon38.png",
+    "64": "icons/icon64.png"
+  }
+}
