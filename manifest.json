@@ -1,14 +1,14 @@
 {
   "manifest_version": 2,
-  "author": "group_1",
+  "author": "Tesdv",
   "applications": {
     "gecko": {
       "id": "pspz123456789@gmail.com"
     }
   },
   "name": "PhishNet",
-  "version": "1.0.1",
-  "description": "AI phishing detection tool for email clients",
+  "version": "1.0.2",
+  "description": "AI phishing detection tool",
   "permissions": [
     "<all_urls>",
     "messagesRead",
