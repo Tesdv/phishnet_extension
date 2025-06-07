@@ -7,24 +7,29 @@
     }
   },
   "name": "PhishNet",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "AI phishing detection tool",
   "permissions": [
     "<all_urls>",
     "messagesRead",
     "messagesUpdate",
     "messagesTags",
-    "messagesTagsList"
+    "messagesTagsList",
+    "storage"
   ],
   "message_display_action": {
     "default_title": "PhishNet"
   },
   "background": {
     "scripts": [
-      "js/api.js",
-      "js/tags.js",
+      "services/api.js",
+      "services/tags.js",
       "background.js"
     ]
+  },
+  "options_ui": {
+  "page": "pages/options/options.html",
+  "open_in_tab": true
   },
   "icons": {
     "38": "icons/icon38.png",
