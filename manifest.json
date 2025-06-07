@@ -21,6 +21,7 @@
   },
   "background": {
     "scripts": [
+      "tags.js",
       "background.js"
     ]
   },
