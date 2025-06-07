@@ -8,7 +8,7 @@ browser.messageDisplay.onMessageDisplayed.addListener(async (tab, message) => {
     }
 
     const body = await getPlainTextBody(message.id);
-    const prediction = await getPhishingPrediction(body);
+    const { prediction } = await callAPI(body, "https://phishnetflask-production.up.railway.app/predict");
 
     if (prediction === "phishing") {
       await tagMessage(message.id, "phishnet-warning");
@@ -34,14 +34,4 @@ async function getPlainTextBody(messageId) {
   };
   walkParts(full.parts || []);
   return body;
-}
-
-async function getPhishingPrediction(body) {
-  const response = await fetch("https://phishnetflask-production.up.railway.app/predict", {
-    method: "POST",
-    headers: { "Content-Type": "text/plain" },
-    body: body
-  });
-  const result = await response.json();
-  return result.prediction;
 }

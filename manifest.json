@@ -7,7 +7,7 @@
     }
   },
   "name": "PhishNet",
-  "version": "1.0",
+  "version": "1.0.1",
   "description": "AI phishing detection tool for email clients",
   "permissions": [
     "<all_urls>",
@@ -21,7 +21,8 @@
   },
   "background": {
     "scripts": [
-      "tags.js",
+      "js/api.js",
+      "js/tags.js",
       "background.js"
     ]
   },
