@@ -15,5 +15,4 @@
 ## 🔗 Links
 
 - [Mozilla Store](https://addons.thunderbird.net/en-Us/thunderbird/addon/phishnet/)
-- [Source Code](https://github.com/Tesdv/phishnet_extension)
 - [Issue Tracker](https://github.com/Tesdv/phishnet_extension/issues)
